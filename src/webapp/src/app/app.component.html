@@ -1,0 +1,30 @@
+<div>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Recruits</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a routerLink="/players" class="nav-link navlink" routerLinkActive="navlinkactive">Players</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/scrape" class="nav-link navlink" routerLinkActive="navlinkactive">Scrape</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a routerLink="/about" class="nav-link navlink" routerLinkActive="navlinkactive">About</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/signin" class="nav-link navlink" routerLinkActive="navlinkactive">SignIn</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-page">
+    <router-outlet></router-outlet>
+  </div>
+</div>

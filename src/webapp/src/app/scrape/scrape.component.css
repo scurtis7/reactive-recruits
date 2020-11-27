@@ -1,0 +1,33 @@
+
+.form-control {
+  width: 100px;
+  margin-left: 13px;
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  background-color: #3A4A4D;
+  color: #cfd8dc;
+  border-color: #cfd8dc;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:active:focus {
+  background-color: #cfd8dc !important;
+  color: #3A4A4D;
+  border-color: #3A4A4D;
+}
+
+.table-dark {
+  background-color: #484848;
+  color: #9de1fe;
+}
+
+.select-college {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,72 @@
+<div>
+  <h1><span class="badge badge-info">Players</span></h1>
+  <div>
+
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+      <!-- Year Column -->
+      <ng-container matColumnDef="year">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Year </th>
+        <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Position </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+    
+      <!-- Height Column -->
+      <ng-container matColumnDef="height">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Height </th>
+        <td mat-cell *matCellDef="let element"> {{element.height}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+      </ng-container>
+
+      <!-- Composite Rank Column -->
+      <ng-container matColumnDef="compositeRank">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Composite Rank </th>
+        <td mat-cell *matCellDef="let element"> {{element.compositeRank}} </td>
+      </ng-container>
+
+      <!-- National Rank Column -->
+      <ng-container matColumnDef="rankNational">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> National Rank </th>
+        <td mat-cell *matCellDef="let element"> {{element.rankNational}} </td>
+      </ng-container>
+
+      <!-- Position Rank Column -->
+      <ng-container matColumnDef="rankPosition">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Position Rank </th>
+        <td mat-cell *matCellDef="let element"> {{element.rankPosition}} </td>
+      </ng-container>
+
+      <!-- State Rank Column -->
+      <ng-container matColumnDef="rankState">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> State Rank </th>
+        <td mat-cell *matCellDef="let element"> {{element.rankState}} </td>
+      </ng-container>
+
+      <!-- Stars Column -->
+      <ng-container matColumnDef="stars">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Stars Rank </th>
+        <td mat-cell *matCellDef="let element"> {{element.stars}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>
+</div>

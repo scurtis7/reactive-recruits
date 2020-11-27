@@ -1,0 +1,43 @@
+<div>
+  <h1><span class="badge badge-info">Scrape</span></h1>
+  <label>
+    <input type="text" class="form-control" placeholder="Year" #year>
+  </label>
+  <select class="browser-default custom-select select-college w-25" #college>
+    <option *ngFor="let college of colleges" value='{{college.siteName}}'>{{college.displayName}}</option>
+  </select>
+  <button type="button" title="Scrape" class="btn btn-primary" (click)="scrape(college.value, year.value); year.value=''">
+    Scrape
+  </button>
+
+  <div>
+    <table class="table table-dark">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Position</th>
+        <th scope="col">Height</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Composite Rank</th>
+        <th scope="col">National Rank</th>
+        <th scope="col">Position Rank</th>
+        <th scope="col">State Rank</th>
+        <th scope="col">Stars</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let player of players">
+        <td>{{player.name}}</td>
+        <td>{{player.position}}</td>
+        <td>{{player.height}}</td>
+        <td>{{player.weight}}</td>
+        <td>{{player.compositeRank}}</td>
+        <td>{{player.rankNational}}</td>
+        <td>{{player.rankPosition}}</td>
+        <td>{{player.rankState}}</td>
+        <td>{{player.stars}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

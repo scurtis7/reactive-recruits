@@ -1,0 +1,19 @@
+# application properties
+
+logging:
+  level:
+    root: INFO
+    com:
+      scurtis: DEBUG
+
+# Need to change this to use the Heroku environment variable
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-3-216-129-140.compute-1.amazonaws.com:5432/d2f7rsnigaabt2
+    username: ltlwwdtphgbngc
+    password: 05d80a57471a5d0b931de823f1c5c5adb63aab35c7ee7a8378063a5ddaa140f4
+  r2dbc:
+    url: r2dbc:postgresql://ec2-3-216-129-140.compute-1.amazonaws.com:5432/d2f7rsnigaabt2
+    username: ltlwwdtphgbngc
+    password: 05d80a57471a5d0b931de823f1c5c5adb63aab35c7ee7a8378063a5ddaa140f4
+

@@ -1,0 +1,12 @@
+ 
+.mat-header-cell {
+  font-size: medium;
+  color: #cfd8dc;
+  padding-left: 10px;
+}
+
+.mat-cell {
+  font-size: medium;
+  color: #9de1fe;
+  padding-left: 10px;
+}

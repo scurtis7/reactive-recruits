@@ -1,0 +1,62 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.0.M4'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.scurtis'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+}
+
+dependencies {
+    implementation "org.flywaydb:flyway-core"
+    implementation "com.zaxxer:HikariCP"
+    implementation "io.projectreactor:reactor-core"
+    implementation 'io.r2dbc:r2dbc-postgresql'
+    implementation 'org.postgresql:postgresql'
+
+    implementation 'org.jsoup:jsoup:1.12.1'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation "org.springframework.boot:spring-boot-starter-jdbc"
+	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	annotationProcessor 'org.projectlombok:lombok'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'io.projectreactor:reactor-test'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+// ************************
+// Uncomment if you just want to build from command line
+// ************************
+//task buildFrontend(type: Exec) {
+//	commandLine 'sh', '-c', 'cd src/webapp && npm run-script build'
+//}
+//
+//build.dependsOn buildFrontend
+//bootJar.dependsOn buildFrontend
