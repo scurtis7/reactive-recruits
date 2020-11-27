@@ -11,4 +11,4 @@ pluginManagement {
 		}
 	}
 }
-rootProject.name = 'recruits'
+rootProject.name = 'reactive-recruits'
